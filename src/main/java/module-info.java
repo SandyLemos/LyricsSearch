@@ -1,4 +1,4 @@
-module org.example.myjavafxapp {
+module br.SandyLemos.LyricsSearch {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;

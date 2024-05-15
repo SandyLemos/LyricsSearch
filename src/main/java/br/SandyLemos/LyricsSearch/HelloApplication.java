@@ -1,6 +1,7 @@
 package br.SandyLemos.LyricsSearch;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -14,11 +15,13 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 
 public class HelloApplication extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws IOException {
+
         Group root = new Group();
         Scene scene = new Scene(root,600,600,Color.LIGHTSKYBLUE);
         Stage stage = new Stage();
