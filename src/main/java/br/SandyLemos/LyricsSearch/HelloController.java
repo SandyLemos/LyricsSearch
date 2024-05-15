@@ -1,4 +1,4 @@
-package org.example.myjavafxapp;
+package br.SandyLemos.LyricsSearch;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

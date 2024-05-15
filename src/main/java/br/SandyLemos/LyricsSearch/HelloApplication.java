@@ -1,4 +1,4 @@
-package org.example.myjavafxapp;
+package br.SandyLemos.LyricsSearch;
 
 import javafx.application.Application;
 import javafx.stage.Stage;

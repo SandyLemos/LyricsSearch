@@ -11,6 +11,6 @@ module org.example.myjavafxapp {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens org.example.myjavafxapp to javafx.fxml;
-    exports org.example.myjavafxapp;
+    opens br.SandyLemos.LyricsSearch to javafx.fxml;
+    exports br.SandyLemos.LyricsSearch;
 }
