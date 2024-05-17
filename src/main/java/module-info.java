@@ -13,4 +13,6 @@ module br.SandyLemos.LyricsSearch {
 
     opens br.SandyLemos.LyricsSearch to javafx.fxml;
     exports br.SandyLemos.LyricsSearch;
+    exports br.sandy.lyricsSearch;
+    opens br.sandy.lyricsSearch to javafx.fxml;
 }

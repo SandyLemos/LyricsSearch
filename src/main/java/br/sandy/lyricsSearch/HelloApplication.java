@@ -1,7 +1,6 @@
-package br.SandyLemos.LyricsSearch;
+package br.sandy.lyricsSearch;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.Scene;
