@@ -11,8 +11,6 @@ module br.SandyLemos.LyricsSearch {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens br.SandyLemos.LyricsSearch to javafx.fxml;
-    exports br.SandyLemos.LyricsSearch;
-    exports br.sandy.lyricsSearch;
     opens br.sandy.lyricsSearch to javafx.fxml;
+    exports br.sandy.lyricsSearch;
 }
