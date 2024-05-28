@@ -7,7 +7,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
-public class FirstPage extends Application {
+public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -21,7 +21,7 @@ public class FirstPage extends Application {
         Scene scene = new Scene(root);
 
         primarystage.setScene(scene);
-        primarystage.setTitle("Welcome!");
+        primarystage.setTitle("Lyrics Search!");
         primarystage.show();
 
         Application.setUserAgentStylesheet(Objects.requireNonNull(getClass().getResource("/assets/themes/dracula.css")).toExternalForm());
