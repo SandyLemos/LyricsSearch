@@ -24,7 +24,7 @@ public class Main extends Application {
         primarystage.setTitle("Lyrics Search!");
         primarystage.show();
 
-        Application.setUserAgentStylesheet(Objects.requireNonNull(getClass().getResource("/assets/themes/dracula.css")).toExternalForm());
+        Application.setUserAgentStylesheet(Objects.requireNonNull(getClass().getResource("/assets/themes/nord-dark.css")).toExternalForm());
         //Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
     }
 }

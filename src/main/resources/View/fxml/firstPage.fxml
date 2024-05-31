@@ -11,12 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="407.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane prefHeight="408.0" prefWidth="684.0">
          <left>
-            <VBox prefHeight="391.0" prefWidth="85.0" style="-fx-background-color: #D8BFD8;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="391.0" prefWidth="85.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
                <children>
                   <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="69.0" prefWidth="85.0" text="Home" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
                      <font>
@@ -78,7 +77,7 @@
             </VBox>
          </left>
          <top>
-            <HBox prefHeight="58.0" prefWidth="684.0" style="-fx-background-color: #FFF0F5;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="58.0" prefWidth="684.0" style="-fx-background-color: #260932;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="28.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                      <image>
