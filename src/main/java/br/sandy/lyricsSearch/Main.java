@@ -15,8 +15,8 @@ public class Main extends Application {
         public void start(Stage primarystage) throws Exception{
 
         // Debugging: imprimir o caminho do recurso
-            System.out.println(getClass().getResource("/View/fxml/firstPage.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/fxml/firstPage.fxml"));
+            System.out.println(getClass().getResource("/View/fxml/searchPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/fxml/searchPage.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -24,7 +24,7 @@ public class Main extends Application {
         primarystage.setTitle("Lyrics Search!");
         primarystage.show();
 
-        Application.setUserAgentStylesheet(Objects.requireNonNull(getClass().getResource("/assets/themes/nord-dark.css")).toExternalForm());
+        Application.setUserAgentStylesheet(Objects.requireNonNull(getClass().getResource("/assets/themes/nord-light.css")).toExternalForm());
         //Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
     }
 }
