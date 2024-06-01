@@ -18,6 +18,9 @@ import org.apache.hc.core5.http.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Esse Dao é responsável pela comunicação com a API do Spotify
+// This Dao is responsible for communicating with the Spotify API
+
 public class MusicDao {
     private final String CLIENT_ID = "37015464548e453a9805973122b41f39";
     private final String SECRET_CLIENTE = "3ba9da5bcd114a10ba12b4f3af4f1e76";
@@ -66,12 +69,11 @@ public class MusicDao {
                 JSONArray tracks = resultadosPesquisa.getJSONObject("tracks").getJSONArray("items");
 
                 for (int i = 0; i < tracks.length(); i++){
-                    JSONObject musica = tracks.getJSONObject(i);
-                    String id = musica.getString("id");
-                    String name = musica.getString("name");
-                    String artist = musica.getJSONArray("artists").getJSONObject(0).getString("name");
+                    JSONObject music = tracks.getJSONObject(i);
+                    String id = music.getString("id");
+                    String name = music.getString("name");
+                    String artist = music.getJSONArray("artists").getJSONObject(0).getString("name");
                     listMusics.add(new Music(name, artist, id));
-
                 }
             }
         }

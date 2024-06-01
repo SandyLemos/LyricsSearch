@@ -1,36 +1,45 @@
 package br.sandy.lyricsSearch.Model;
 
-import java.util.ArrayList;
+import br.sandy.lyricsSearch.Dao.MusicDao;
+import br.sandy.lyricsSearch.Dao.MusicDaoLocalImpl;
+import java.io.IOException;
 import java.util.List;
+import java.util.ArrayList;
+
+// Classe interagindo com a Api externa e com a implementação local
+// Class interacting with the external Api and the local implementation
 
 public class MusicRegistration {
-    private List<Music> musics;
+    private MusicDaoLocalImpl localMusicDao;
+    private MusicDao spotifyMusicDao;
 
-    public MusicRegistration() {
-        this.musics = new ArrayList<>();
+    public MusicRegistration(){
+        this.localMusicDao = new MusicDaoLocalImpl();
+        this.spotifyMusicDao = new MusicDao();
     }
 
-    // Adiciona
-    public void addMusic(Music music) {
-        musics.add(music);
+    public void addMusic(Music music){
+        localMusicDao.addMusic(music);
     }
 
-    // Remove por título
     public void removeMusic(String title){
-        musics.removeIf(m -> m.getTitle().equalsIgnoreCase(title));
+        localMusicDao.removeMusic(title);
     }
 
-    // Busca por título, artista, gênero, álbum e letra
     public Music searchMusic(String title, String artist, String gender, String album, String lyric){
-        for(Music music : musics){
-            if(music.getTitle().equalsIgnoreCase(title)){
-                return music;
-            }
-        }
-        return null;
+        return localMusicDao.searchMusic(title, artist, gender, album, lyric);
     }
 
     public List<Music> listMusic(){
-        return new ArrayList<>(musics);
+        return localMusicDao.listMusic();
+    }
+
+    public List<Music> searchMusicOnline(String nameMusic) throws IOException{
+        try{
+            return spotifyMusicDao.searchMusic(nameMusic);
+        } catch (Exception e){
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
     }
 }

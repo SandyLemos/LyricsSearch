@@ -2,18 +2,26 @@ package br.sandy.lyricsSearch.Model;
 
 public class Music {
 
+    private String id;
     private String title;
     private String artist;
-    private String gender;
     private String album;
     private String lyric;
 
-    public Music(String title, String artist, String gender, String album, String lyric){
+    public Music(String id, String title, String artist, String album, String lyric){
+        this.id = id;
         this.title = title;
         this.artist = artist;
-        this.gender = gender;
         this.album = album;
         this.lyric = lyric;
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
     }
 
     public String getTitle(){
@@ -32,14 +40,6 @@ public class Music {
         this.artist = artist;
     }
 
-    public String getGender(){
-        return gender;
-    }
-
-    public void setGender(String gender){
-        this.gender = gender;
-    }
-
     public String getAlbum(){
         return album;
     }
@@ -56,8 +56,8 @@ public class Music {
         this.lyric = lyric;
     }
 
-    @Override
-    public String toString(){
-        return "Music [Title =" + title + ", Artist =" + artist + ", Album =" + album + ", Gender =" + gender + "]";
-    }
+   // @Override
+   // public String toString(){
+     //   return "Music [Title =" + title + ", Artist =" + artist + ", Album =" + album + ", Gender =" + gender + "]";
+   // }
 }

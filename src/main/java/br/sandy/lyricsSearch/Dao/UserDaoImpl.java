@@ -4,6 +4,8 @@ import br.sandy.lyricsSearch.Model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 
 public class UserDaoImpl implements UserDao {
     private List<User> users;
@@ -19,7 +21,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUserById(String id){
-        optional<User> user = users.stream()
+        Optional<User> user = users.stream()
                 .filter(u -> u.getId().equals(id))
                 .findFirst();
         return user.orElse(null);
