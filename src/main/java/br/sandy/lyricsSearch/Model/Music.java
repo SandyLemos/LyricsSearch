@@ -56,8 +56,8 @@ public class Music {
         this.lyric = lyric;
     }
 
-   // @Override
-   // public String toString(){
-     //   return "Music [Title =" + title + ", Artist =" + artist + ", Album =" + album + ", Gender =" + gender + "]";
-   // }
+   @Override
+   public String toString(){
+        return "Music [Title =" + title + ", Artist =" + artist + ", Album =" + album + ",Lyric =" + lyric + "]";
+    }
 }

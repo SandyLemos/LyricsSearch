@@ -2,7 +2,7 @@ package br.sandy.lyricsSearch;
 
 import br.sandy.lyricsSearch.Model.Music;
 import br.sandy.lyricsSearch.Model.MusicRegistration;
-
+import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
 
 // Testando a classe MusicRegistration
@@ -43,7 +43,7 @@ public class MainExample {
             for(Music music : musicReg.searchMusicOnline("Title1")){
                 System.out.println(music.getTitle() + "-" + music.getArtist());
             }
-        } catch(IOException e){
+        } catch(IOException | ParseException e){
             e.printStackTrace();
         }
     }
