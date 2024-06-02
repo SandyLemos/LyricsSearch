@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MusicRegistration {
     private MusicDaoLocalImpl localMusicDao;
-    private MusicDao OnlineMusicDao;
+    private MusicDao onlineMusicDao;
 
     public MusicRegistration(){
         this.localMusicDao = new MusicDaoLocalImpl();
@@ -36,7 +36,7 @@ public class MusicRegistration {
 
     public List<Music> searchMusicOnline(String nameMusic) throws IOException{
         try{
-            return spotifyMusicDao.searchMusic(nameMusic);
+            return onlineMusicDao.searchMusic(nameMusic);
         } catch (Exception e){
             e.printStackTrace();
             return new ArrayList<>();

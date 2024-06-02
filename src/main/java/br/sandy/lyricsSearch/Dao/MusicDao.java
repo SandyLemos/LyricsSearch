@@ -11,7 +11,7 @@ public class MusicDao {
         Client client = ClientBuilder.newClient();
 
         try {
-            Response response = client.target("https://api.lyrics.ovh/v1/artist/title")
+            Response response = client.target("https://api.lyrics.ovh/v1/Coldplay/Adventure of a Lifetime")
                     .request(MediaType.TEXT_PLAIN_TYPE)
                     .get();
 
