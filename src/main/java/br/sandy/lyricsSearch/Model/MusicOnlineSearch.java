@@ -6,10 +6,10 @@ import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
 import java.util.List;
 
-public class MusicRegistration {
+public class MusicOnlineSearch {
     private MusicDao musicDao;
 
-    public MusicRegistration() {
+    public MusicOnlineSearch() {
         musicDao = new MusicDao();
     }
 

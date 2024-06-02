@@ -1,7 +1,7 @@
 package br.sandy.lyricsSearch;
 
 import br.sandy.lyricsSearch.Model.Music;
-import br.sandy.lyricsSearch.Model.MusicRegistration;
+import br.sandy.lyricsSearch.Model.MusicOnlineSearch;
 import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class MainExample {
     public static void main(String[] args){
-        MusicRegistration musicReg = new MusicRegistration();
+        MusicOnlineSearch musicReg = new MusicOnlineSearch();
 
         // Buscando músicas online
         try{
