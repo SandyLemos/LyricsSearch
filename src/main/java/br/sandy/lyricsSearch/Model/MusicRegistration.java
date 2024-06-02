@@ -11,11 +11,11 @@ import java.util.ArrayList;
 
 public class MusicRegistration {
     private MusicDaoLocalImpl localMusicDao;
-    private MusicDao spotifyMusicDao;
+    private MusicDao OnlineMusicDao;
 
     public MusicRegistration(){
         this.localMusicDao = new MusicDaoLocalImpl();
-        this.spotifyMusicDao = new MusicDao();
+        this.onlineMusicDao = new MusicDao();
     }
 
     public void addMusic(Music music){

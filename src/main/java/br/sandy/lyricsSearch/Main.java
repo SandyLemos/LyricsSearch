@@ -14,8 +14,9 @@ public class Main extends Application {
         @Override
         public void start(Stage primarystage) throws Exception{
 
+
         // Debugging: imprimir o caminho do recurso
-            System.out.println(getClass().getResource("/View/fxml/searchPage.fxml"));
+        // System.out.println(getClass().getResource("/View/fxml/searchPage.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/fxml/searchPage.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
