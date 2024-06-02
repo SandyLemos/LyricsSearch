@@ -25,7 +25,7 @@ public class MainExample {
         }
 
         // Buscando uma múscia localmente
-        Music searchedMusic = musicReg.searchMusic("Title", null, null, null, null);
+        Music searchedMusic = musicReg.searchMusic("Title1", null, null , null , null);
         System.out.println("Música local encontrada: " + searchedMusic.getTitle());
 
         // Removendo uma música localmente
@@ -40,7 +40,7 @@ public class MainExample {
         // Buscando músicas online
         try{
             System.out.println("Músicas encontradas online:");
-            for(Music music : musicReg.searchMusicOnline("Title1")){
+            for(Music music : musicReg.searchMusicOnline("treasure")){
                 System.out.println(music.getTitle() + "-" + music.getArtist());
             }
         } catch(IOException | ParseException e){

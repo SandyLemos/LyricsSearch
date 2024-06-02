@@ -15,5 +15,4 @@ public class SearchPageController {
 
     @FXML
     private Button searchButton;
-
 }
