@@ -17,6 +17,10 @@ import org.apache.hc.core5.http.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.nio.charset.StandardCharsets;
+import java.net.URLEncoder;
+import org.json.JSONException;
+
 public class MusicDao {
     private final String CLIENT_ID = "37015464548e453a9805973122b41f39";
     private final String SECRET_CLIENTE = "3ba9da5bcd114a10ba12b4f3af4f1e76";
@@ -70,5 +74,29 @@ public class MusicDao {
             }
         }
         return listaMusicas;
+    }
+
+    public void catchLyric(Music music) throws IOException, ParseException{
+        try(CloseableHttpClient httpClient = HttpClients.createDefault()){
+            final String URL_LYRICS_OVH = "https://api.lyrics.ovh/v1/artist/title";
+
+            String urlSearch = URL_LYRICS_OVH + URLEncoder.encode(music.getArtist(), StandardCharsets.UTF_8)
+                    + "/" + URLEncoder.encode(music.getTitle(), StandardCharsets.UTF_8);
+
+            HttpGet get = new HttpGet(urlSearch);
+
+            try(CloseableHttpResponse response = httpClient.execute(get)){
+                String bodyResponse = EntityUtils.toString(response.getEntity());
+
+                JSONObject searchResults = new JSONObject(bodyResponse);
+
+                try{
+                    String lyric = searchResults.getString("lyrics");
+                    music.setLyric(lyric);
+                } catch (JSONException e){
+                    music.setLyric("ERRO!!!");
+                }
+            }
+        }
     }
 }
