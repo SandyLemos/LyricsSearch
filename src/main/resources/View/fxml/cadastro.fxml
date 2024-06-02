@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lyrics.Cadastro">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="307.0" layoutX="75.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="467.0" />
+      <Label layoutX="208.0" layoutY="47.0" text="Cadastro">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="116.0" layoutY="128.0" text="Nome" />
+      <Label layoutX="355.0" layoutY="128.0" text="E-mail" />
+      <Label layoutX="116.0" layoutY="227.0" text="Senha" />
+      <TextField layoutX="116.0" layoutY="148.0" />
+      <TextField layoutX="355.0" layoutY="145.0" />
+      <TextField layoutX="116.0" layoutY="244.0" />
+      <TextField layoutX="355.0" layoutY="244.0" />
+      <Label layoutX="355.0" layoutY="227.0" text="Telefone" />
+      <JFXButton layoutX="471.0" layoutY="305.0" style="-fx-background-color: black;" text="Salvar" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-arrow-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
