@@ -27,8 +27,9 @@ public class MainExample {
         // Buscando músicas online no Lyrics.ovh
         try{
             System.out.println("Músicas encontradas online no Lyrics.ovh:");
-            List<Music> lyricsMusicas = musicSearch.searchMusicOnline("coldplay");
+            List<Music> lyricsMusicas = musicSearch.searchMusicOnline("lana del rey");
             for(Music music : lyricsMusicas){
+                new MusicDao().catchLyric(music);
                 System.out.println(music.getTitle() + "-" + music.getLyric());
             }
         } catch(IOException | ParseException e){

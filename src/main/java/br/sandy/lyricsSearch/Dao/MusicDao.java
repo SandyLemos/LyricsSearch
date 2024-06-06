@@ -76,27 +76,45 @@ public class MusicDao {
         return listaMusicas;
     }
 
-    public void catchLyric(Music music) throws IOException, ParseException{
-        try(CloseableHttpClient httpClient = HttpClients.createDefault()){
-            final String URL_LYRICS_OVH = "https://api.lyrics.ovh/v1/artist/title";
+    public void catchLyric(Music music) throws IOException, ParseException {
+        final String URL_LYRICS_OVH = "https://api.lyrics.ovh/v1/";
 
-            String urlSearch = URL_LYRICS_OVH + URLEncoder.encode(music.getArtist(), StandardCharsets.UTF_8)
-                    + "/" + URLEncoder.encode(music.getTitle(), StandardCharsets.UTF_8);
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            String urlSearch = URL_LYRICS_OVH + URLEncoder.encode(music.getArtist(), StandardCharsets.UTF_8) + "/"
+                    + URLEncoder.encode(music.getTitle(), StandardCharsets.UTF_8);
 
             HttpGet get = new HttpGet(urlSearch);
 
-            try(CloseableHttpResponse response = httpClient.execute(get)){
+            try (CloseableHttpResponse response = httpClient.execute(get)) {
+                int statusCode = response.getCode(); // Compatível com HttpClient 5
                 String bodyResponse = EntityUtils.toString(response.getEntity());
 
-                JSONObject searchResults = new JSONObject(bodyResponse);
+                System.out.println("HTTP Status: " + statusCode);
+                System.out.println("Response Body: " + bodyResponse);
 
-                try{
-                    String lyric = searchResults.getString("lyrics");
-                    music.setLyric(lyric);
-                } catch (JSONException e){
+                if (statusCode == 200) {
+                    try {
+                        JSONObject searchResults = new JSONObject(bodyResponse);
+                        String lyric = searchResults.getString("lyric");
+                        music.setLyric(lyric);
+                    } catch (JSONException e) {
+                        System.err.println("JSON Parsing error: " + e.getMessage());
+                        e.printStackTrace();
+                        music.setLyric("ERRO!!!");
+                    }
+                } else {
+                    System.err.println("Non-OK response: " + statusCode);
                     music.setLyric("ERRO!!!");
                 }
             }
+        } catch (IOException e) {
+            System.err.println("HTTP request error: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        } catch (ParseException e) {
+            System.err.println("Parsing error: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
         }
     }
-}
+    }
