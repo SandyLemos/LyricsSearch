@@ -1,4 +1,4 @@
-package br.sandy.lyricsSearch.Dao;
+package br.sandy.lyricsSearch.Model.Dao;
 
 import br.sandy.lyricsSearch.Model.User;
 

@@ -1,4 +1,4 @@
-package br.sandy.lyricsSearch.Dao;
+package br.sandy.lyricsSearch.Model.Dao;
 
 import br.sandy.lyricsSearch.Model.Music;
 import org.apache.hc.client5.http.classic.methods.HttpGet;

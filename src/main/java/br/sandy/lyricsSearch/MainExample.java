@@ -1,7 +1,7 @@
 package br.sandy.lyricsSearch;
 
 import br.sandy.lyricsSearch.Model.Music;
-import br.sandy.lyricsSearch.Dao.MusicDao;
+import br.sandy.lyricsSearch.Model.Dao.MusicDao;
 import br.sandy.lyricsSearch.Model.MusicOnlineSearch;
 import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
