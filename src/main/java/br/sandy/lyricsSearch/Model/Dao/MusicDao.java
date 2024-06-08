@@ -95,7 +95,8 @@ public class MusicDao {
                 if (statusCode == 200) {
                     try {
                         JSONObject searchResults = new JSONObject(bodyResponse);
-                        String lyric = searchResults.getString("lyric");
+                        // update key to lyrics
+                        String lyric = searchResults.getString("lyrics");
                         music.setLyric(lyric);
                     } catch (JSONException e) {
                         System.err.println("JSON Parsing error: " + e.getMessage());

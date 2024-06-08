@@ -9,7 +9,7 @@ import java.util.List;
 
 // Busca de músicas online através de API
 
-public class MainExample {
+public class MainAPIservice {
     public static void main(String[] args){
         MusicOnlineSearch musicSearch = new MusicOnlineSearch();
 
