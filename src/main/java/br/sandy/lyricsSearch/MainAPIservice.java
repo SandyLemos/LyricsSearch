@@ -2,7 +2,7 @@ package br.sandy.lyricsSearch;
 
 import br.sandy.lyricsSearch.Model.Music;
 import br.sandy.lyricsSearch.Model.MusicApiService;
-import br.sandy.lyricsSearch.Model.MusicOnlineSearch;
+import br.sandy.lyricsSearch.Model.MusicService;
 import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MainAPIservice {
     public static void main(String[] args){
-        MusicOnlineSearch musicSearch = new MusicOnlineSearch();
+        MusicService musicSearch = new MusicService();
 
         // Buscando músicas online no Spotify
         try{

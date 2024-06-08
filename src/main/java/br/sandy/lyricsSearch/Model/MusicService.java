@@ -5,10 +5,10 @@ import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
 import java.util.List;
 
-public class MusicOnlineSearch {
+public class MusicService {
     private MusicApiService musicApiService;
 
-    public MusicOnlineSearch() {
+    public MusicService() {
         musicApiService = new MusicApiService();
     }
 
