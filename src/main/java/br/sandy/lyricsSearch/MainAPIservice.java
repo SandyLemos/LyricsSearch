@@ -1,7 +1,7 @@
 package br.sandy.lyricsSearch;
 
 import br.sandy.lyricsSearch.Model.Music;
-import br.sandy.lyricsSearch.Model.Dao.MusicDao;
+import br.sandy.lyricsSearch.Model.MusicApiService;
 import br.sandy.lyricsSearch.Model.MusicOnlineSearch;
 import org.apache.hc.core5.http.ParseException;
 import java.io.IOException;
@@ -29,8 +29,8 @@ public class MainAPIservice {
             System.out.println("Músicas encontradas online no Lyrics.ovh:");
             List<Music> lyricsMusicas = musicSearch.searchMusicOnline("lana del rey");
             for(Music music : lyricsMusicas){
-                new MusicDao().catchLyric(music);
-                System.out.println(music.getTitle() + "-" + music.getLyric());
+                new MusicApiService().catchLyric(music);
+                System.out.println(music.getTitle() + " - " + music.getLyric());
             }
         } catch(IOException | ParseException e){
             e.printStackTrace();
