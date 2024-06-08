@@ -9,7 +9,7 @@ import java.util.List;
 
 // Busca de músicas online através de API
 
-public class MainAPIservice {
+public class MainAPiService {
     public static void main(String[] args){
         MusicService musicSearch = new MusicService();
 
@@ -33,6 +33,35 @@ public class MainAPIservice {
                 System.out.println(music.getTitle() + " - " + music.getLyric());
             }
         } catch(IOException | ParseException e){
+            e.printStackTrace();
+        }
+
+        // Buscar e imprimir letra de uma música específica
+        searchAndPrintSpecificLyric();
+    }
+
+    private static void searchAndPrintSpecificLyric() {
+        String artist = "Lana Del Rey";
+        String title = "Video Games";
+
+        Music specificMusic = null;
+        try {
+            List<Music> lyricsMusicas = new MusicService().searchMusicOnline(artist + " " + title);
+            for (Music music : lyricsMusicas) {
+                if (music.getArtist().equalsIgnoreCase(artist) && music.getTitle().equalsIgnoreCase(title)) {
+                    specificMusic = music;
+                    break;
+                }
+            }
+
+            if (specificMusic != null) {
+                new MusicApiService().catchLyric(specificMusic);
+                System.out.println("Letra de " + specificMusic.getArtist() + " - " + specificMusic.getTitle() + ":");
+                System.out.println(specificMusic.getLyric());
+            } else {
+                System.out.println("A música " + title + " de " + artist + " não foi encontrada.");
+            }
+        } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
     }
