@@ -12,11 +12,6 @@ public class MusicService {
         musicApiService = new MusicApiService();
     }
 
-    // Método para pesquisar músicas online
-    public List<Music> searchMusicOnline(String query) throws IOException, ParseException {
-        return musicApiService.searchMusic(query);
-    }
-
     // Método para buscar letras de uma música
     public void catchLyric(Music music) throws IOException, ParseException {
         musicApiService.catchLyric(music);

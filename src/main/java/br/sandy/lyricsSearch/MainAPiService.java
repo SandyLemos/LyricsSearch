@@ -10,57 +10,23 @@ import java.util.List;
 // Busca de músicas online através de API
 
 public class MainAPiService {
-    public static void main(String[] args){
-        MusicService musicSearch = new MusicService();
-
-        // Buscando músicas online no Spotify
-        try{
-            System.out.println("Músicas encontradas online no Spotify:");
-            List<Music> spotifyMusicas = musicSearch.searchMusicOnline("treasure");
-            for(Music music : spotifyMusicas){
-                System.out.println(music.getTitle() + "-" + music.getArtist());
-            }
-        } catch(IOException | ParseException e){
-            e.printStackTrace();
-        }
-
-        // Buscando músicas online no Lyrics.ovh
-        try{
-            System.out.println("Músicas encontradas online no Lyrics.ovh:");
-            List<Music> lyricsMusicas = musicSearch.searchMusicOnline("lana del rey");
-            for(Music music : lyricsMusicas){
-                new MusicApiService().catchLyric(music);
-                System.out.println(music.getTitle() + " - " + music.getLyric());
-            }
-        } catch(IOException | ParseException e){
-            e.printStackTrace();
-        }
-
+    public static void main(String[] args) {
         // Buscar e imprimir letra de uma música específica
         searchAndPrintSpecificLyric();
     }
 
     private static void searchAndPrintSpecificLyric() {
-        String artist = "Lana Del Rey";
-        String title = "Video Games";
+        String artist = "Coldplay";
+        String title = "Yellow";
 
-        Music specificMusic = null;
         try {
-            List<Music> lyricsMusicas = new MusicService().searchMusicOnline(artist + " " + title);
-            for (Music music : lyricsMusicas) {
-                if (music.getArtist().equalsIgnoreCase(artist) && music.getTitle().equalsIgnoreCase(title)) {
-                    specificMusic = music;
-                    break;
-                }
-            }
+            Music specificMusic = new Music("id_da_musica", title, artist, "nome_do_album", "letra_inicial");
 
-            if (specificMusic != null) {
-                new MusicApiService().catchLyric(specificMusic);
-                System.out.println("Letra de " + specificMusic.getArtist() + " - " + specificMusic.getTitle() + ":");
-                System.out.println(specificMusic.getLyric());
-            } else {
-                System.out.println("A música " + title + " de " + artist + " não foi encontrada.");
-            }
+            MusicService musicService = new MusicService();
+            musicService.catchLyric(specificMusic);
+
+            System.out.println("Letra de " + specificMusic.getArtist() + " - " + specificMusic.getTitle() + ":");
+            System.out.println(specificMusic.getLyric());
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
