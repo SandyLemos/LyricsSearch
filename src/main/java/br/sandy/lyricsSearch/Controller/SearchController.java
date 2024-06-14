@@ -7,14 +7,6 @@ import javafx.scene.control.ListView;
 
 public class SearchController {
 
-
-import br.sandy.lyricsSearch.Model.SearchLyrics;
-import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-
-    public class SearchController {
-
         @FXML
         private TextField artistField;
 
