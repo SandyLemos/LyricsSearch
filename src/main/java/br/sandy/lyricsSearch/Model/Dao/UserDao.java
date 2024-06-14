@@ -1,12 +1,9 @@
-package br.sandy.lyricsSearch.Model.Dao;
+package com.example.lyrics;
 
-import br.sandy.lyricsSearch.Model.User;
 import java.util.List;
 
 public interface UserDao {
     void addUser(User user);
-    User getUserById(String id);
     List<User> getAllUsers();
-    void updateUser(User user);
-    void deleteUser(String id);
+
 }
