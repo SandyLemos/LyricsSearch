@@ -1,28 +1,24 @@
-package br.sandy.lyricsSearch.Model;
+package com.example.lyrics;
+
 
 public class Music {
 
-    private String id;
     private String title;
     private String artist;
     private String album;
     private String lyric;
 
-    public Music(String id, String title, String artist, String album, String lyric){
-        this.id = id;
+    public Music(String title, String artist, String album, String lyric){
+
         this.title = title;
         this.artist = artist;
         this.album = album;
         this.lyric = lyric;
     }
+    public Music(){
 
-    public String getId(){
-        return id;
     }
 
-    public void setId(String id){
-        this.id = id;
-    }
 
     public String getTitle(){
         return title;
@@ -56,8 +52,8 @@ public class Music {
         this.lyric = lyric;
     }
 
-   @Override
-   public String toString(){
+    @Override
+    public String toString(){
         return "Music [Title =" + title + ", Artist =" + artist + ", Album =" + album + ",Lyric =" + lyric + "]";
     }
 }
