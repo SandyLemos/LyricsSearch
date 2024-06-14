@@ -9,15 +9,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lyrics.TelaInicialController">
    <top>
       <Pane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #CD5C5C;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="16.0" layoutY="22.0" prefHeight="30.0" prefWidth="152.0" text="Lyrics Search">
+            <Label layoutX="5.0" layoutY="23.0" prefHeight="30.0" prefWidth="152.0" text="Lyrics Search">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -29,17 +27,16 @@
                   <Font name="Script MT Bold" size="21.0" />
                </font>
             </Label>
-            <TextField layoutX="233.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" stylesheets="@textfield.css" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="30.0" layoutX="196.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-            <ImageView fitHeight="23.0" fitWidth="26.0" layoutX="199.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@search.png" />
-               </image>
-            </ImageView>
-            <JFXButton layoutX="490.0" layoutY="20.0" prefHeight="36.0" prefWidth="96.0" style="-fx-background-color: white;" text="Enviar letra">
-               <font>
-                  <Font size="15.0" />
-               </font>
+            <TextField fx:id="nome_musica" layoutX="213.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome da música" stylesheets="@textfield.css" />
+            <TextField fx:id="nome_artista" layoutX="406.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome do cantor/banda" stylesheets="@textfield.css" />
+            <JFXButton layoutX="157.0" layoutY="23.0" onAction="#mostrar" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
          </children>
       </Pane>
@@ -47,8 +44,9 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <StackPane layoutX="200.0" layoutY="63.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <StackPane fx:id="conteudo" layoutX="200.0" layoutY="63.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
    </center>
 </BorderPane>
+
