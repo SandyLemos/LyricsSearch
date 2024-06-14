@@ -1,28 +1,24 @@
-package br.sandy.lyricsSearch.Model;
+package com.example.lyrics;
 
 public class User {
 
-    private String id;
+
     private String userName;
     private String password;
     private String email;
-    private String favoritesSongs;
+    private String telefone;
 
-    public User(String id, String userName, String password, String email, String favoritesSongs){
-        this.id= id;
+    public User(String userName, String password, String email, String telefone){
         this.userName = userName;
         this.password = password;
         this.email = email;
-        this.favoritesSongs = favoritesSongs;
+        this.telefone = telefone;
     }
 
-    public String getId(){
-        return id;
+    public User() {
+
     }
 
-    public void setId(String id){
-        this.id = id;
-    }
 
     public String getUserName(){
         return userName;
@@ -48,11 +44,5 @@ public class User {
         this.email = email;
     }
 
-    public String getFavoritesSongs(){
-        return favoritesSongs;
-    }
 
-    public void setFavoritesSongs(String favoritesSongs){
-        this.favoritesSongs = favoritesSongs;
-    }
 }
