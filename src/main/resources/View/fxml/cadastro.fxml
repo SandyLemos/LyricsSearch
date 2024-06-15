@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,17 +10,17 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.CadastroController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.CadastroController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="307.0" layoutX="75.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="467.0" />
-      <Label layoutX="208.0" layoutY="47.0" text="Cadastro">
+      <Label alignment="CENTER" layoutX="208.0" layoutY="47.0" prefHeight="43.0" prefWidth="181.0" text="Cadastro" textAlignment="CENTER">
          <font>
             <Font size="29.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@user.png" />
+                  <Image url="@../../icons/user.png" />
                </image>
             </ImageView>
          </graphic>
@@ -36,11 +37,13 @@
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-arrow-30.png" />
+                  <Image url="@../../icons/icons8-arrow-30.png" />
                </image>
             </ImageView>
          </graphic>
       </JFXButton>
    </children>
+   <stylesheets>
+      <URL value="@../../assets/themes/style.css" />
+   </stylesheets>
 </AnchorPane>
-

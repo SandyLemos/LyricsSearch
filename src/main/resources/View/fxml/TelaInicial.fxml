@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.TelaInicialController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../assets/themes/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.TelaInicialController">
    <top>
       <Pane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #CD5C5C;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="5.0" layoutY="23.0" prefHeight="30.0" prefWidth="152.0" text="Lyrics Search">
+            <Label layoutX="5.0" layoutY="23.0" prefHeight="30.0" prefWidth="152.0" stylesheets="@../../assets/themes/textfield.css" text="Lyrics Search">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -24,16 +24,16 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font name="Script MT Bold" size="21.0" />
+                  <Font name="Sylfaen" size="21.0" />
                </font>
             </Label>
-            <TextField fx:id="nome_musica" layoutX="213.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome da música" stylesheets="@textfield.css" />
-            <TextField fx:id="nome_artista" layoutX="406.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome do cantor/banda" stylesheets="@textfield.css" />
+            <TextField fx:id="nome_musica" layoutX="213.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome da música" stylesheets="@../../assets/themes/textfield.css" />
+            <TextField fx:id="nome_artista" layoutX="406.0" layoutY="22.0" prefHeight="31.0" prefWidth="187.0" promptText="Digite o nome do cantor/banda" stylesheets="@../../assets/themes/textfield.css" />
             <JFXButton layoutX="157.0" layoutY="23.0" onAction="#mostrar" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: white;">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../icons/search.png" />
+                        <Image url="@../../assets/themes/search.png" />
                      </image>
                   </ImageView>
                </graphic>
