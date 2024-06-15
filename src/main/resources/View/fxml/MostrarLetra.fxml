@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.AddMusicaController">
-    <children>
-        <TextField fx:id="titulo" layoutX="14.0" layoutY="98.0" />
-        <TextField fx:id="artista" layoutX="433.0" layoutY="98.0" />
-        <TextField fx:id="album" layoutX="14.0" layoutY="156.0" />
-        <TextField fx:id="id" layoutX="433.0" layoutY="155.0" prefHeight="25.0" prefWidth="149.0" />
-        <TextField fx:id="letra" layoutX="12.0" layoutY="230.0" prefHeight="92.0" prefWidth="429.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutX="197.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="194.0" />
-        <Label layoutX="210.0" layoutY="15.0" prefHeight="34.0" prefWidth="181.0" text="Adicionar Músicas ">
-            <graphic>
-                <ImageView fitHeight="131.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../icons/musicplus.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Label>
-        <Label layoutX="12.0" layoutY="77.0" text="Título" />
-        <Label layoutX="433.0" layoutY="77.0" text="Artista" />
-        <Label layoutX="22.0" layoutY="136.0" text="Álbum" />
-        <Label layoutX="14.0" layoutY="207.0" text="Letra" />
-        <Label layoutX="433.0" layoutY="136.0" text="Id" />
-        <JFXButton layoutX="490.0" layoutY="290.0" onAction="#addMusic" style="-fx-background-color: white;" text="Adicionar">
-            <graphic>
-                <ImageView fitHeight="43.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../icons/plus.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-        </JFXButton>
-    </children>
-</Pane>
+<ScrollPane fx:id="scrollPane" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.MostrarLetraController">
+    <content>
+        <StackPane fx:id="stackPane" prefHeight="335.0" prefWidth="600.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="INDIANRED" height="335.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+                <Label fx:id="letra" alignment="CENTER" textFill="BLACK" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </StackPane>
+    </content>
+</ScrollPane>
