@@ -1,5 +1,4 @@
-package com.example.lyrics;
-
+package br.sandy.lyricsSearch.Model;
 
 public class Music {
 
@@ -9,16 +8,11 @@ public class Music {
     private String lyric;
 
     public Music(String title, String artist, String album, String lyric){
-
         this.title = title;
         this.artist = artist;
         this.album = album;
         this.lyric = lyric;
     }
-    public Music(){
-
-    }
-
 
     public String getTitle(){
         return title;

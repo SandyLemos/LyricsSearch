@@ -1,5 +1,7 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Controller;
 
+import br.sandy.lyricsSearch.Model.Dao.MusicListDaoImp;
+import br.sandy.lyricsSearch.Model.SearchLyrics;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,7 +41,7 @@ public class TelaInicialController {
         // Verifica se a música já está na lista
         for (int i = 0; i < musicDao.MusicList.size(); i++) {
             if (musicDao.MusicList.get(i).getTitle().equals(n_musica) && musicDao.MusicList.get(i).getArtist().equals(n_artista)) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("MostrarLetra.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/fxml/MostrarLetra.fxml"));
                 root = loader.load();
                 mostrarController = loader.getController();
                 mostrarController.MostrarLetra(musicDao.MusicList.get(i).getLyric());
@@ -50,7 +52,7 @@ public class TelaInicialController {
         // Se a música não está na lista, busca a letra
         if (root == null) {
             String letra = searchLyrics.fetchLyrics(n_artista, n_musica);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("MostrarLetra.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/fxml/MostrarLetra.fxml"));
             root = loader.load();
             mostrarController = loader.getController();
             mostrarController.MostrarLetra(letra);

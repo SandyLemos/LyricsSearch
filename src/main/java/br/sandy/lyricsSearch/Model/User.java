@@ -1,4 +1,4 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Model;
 
 public class User {
 
@@ -14,11 +14,6 @@ public class User {
         this.email = email;
         this.telefone = telefone;
     }
-
-    public User() {
-
-    }
-
 
     public String getUserName(){
         return userName;
@@ -43,6 +38,5 @@ public class User {
     public void setEmail(String email){
         this.email = email;
     }
-
 
 }

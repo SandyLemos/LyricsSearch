@@ -20,7 +20,7 @@ public class MainAPiService {
         String title = "Yellow";
 
         try {
-            Music specificMusic = new Music("id_da_musica", title, artist, "nome_do_album", "letra_inicial");
+            Music specificMusic = new Music(title, artist, "nome_do_album", "letra_inicial");
 
             MusicService musicService = new MusicService();
             musicService.catchLyric(specificMusic);

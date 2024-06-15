@@ -1,5 +1,6 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Model.Dao;
 
+import br.sandy.lyricsSearch.Model.Music;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -135,7 +136,7 @@ public class MusicListDaoImp implements MusicListDao {
 
     @Override
     public List<Music> getAllMusics() {
-        return List.of();
+        return MusicList;
     }
 
     @Override

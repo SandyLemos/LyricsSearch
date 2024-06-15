@@ -1,5 +1,7 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Controller;
 
+import br.sandy.lyricsSearch.Model.User;
+import br.sandy.lyricsSearch.Model.Dao.UserDaoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

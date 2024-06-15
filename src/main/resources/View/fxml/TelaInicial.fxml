@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lyrics.TelaInicialController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.TelaInicialController">
    <top>
       <Pane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #CD5C5C;" BorderPane.alignment="CENTER">
          <children>
@@ -19,7 +19,7 @@
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icone.png" />
+                        <Image url="@../../icons/icone.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -33,7 +33,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@search.png" />
+                        <Image url="@../../icons/search.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -49,4 +49,3 @@
       </AnchorPane>
    </center>
 </BorderPane>
-

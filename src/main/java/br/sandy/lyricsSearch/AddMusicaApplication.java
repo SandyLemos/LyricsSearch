@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
-    @Override
+public class AddMusicaApplication extends Application {
+
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/View/fxml/hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AddMusicaApplication.class.getResource("/View/fxml/AddMusica.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
         stage.setScene(scene);
+        stage.setTitle("Adicione uma nova letra");
         stage.setResizable(false);
         stage.show();
     }

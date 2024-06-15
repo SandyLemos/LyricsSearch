@@ -1,5 +1,7 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Controller;
 
+import br.sandy.lyricsSearch.Model.Music;
+import br.sandy.lyricsSearch.Model.Dao.MusicListDaoImp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -29,8 +31,6 @@ public class AddMusicaController {
         for (int i=0; i<musicDao.MusicList.size();i++) {
             System.out.println("titulo:"+musicDao.MusicList.get(i).getTitle());
         }
-
-        
     }
 
 }

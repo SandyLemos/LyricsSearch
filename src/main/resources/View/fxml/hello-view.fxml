@@ -10,7 +10,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="626.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffafb" height="322.0" layoutX="101.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="438.0" />
@@ -27,11 +26,11 @@
       <Button layoutX="259.0" layoutY="312.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Cadastre-se" />
       <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="428.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icone.png" />
+            <Image url="@../../icons/icone.png" />
          </image>
       </ImageView>
       <Button layoutX="191.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Login" />
-      <Button layoutX="324.0" layoutY="245.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Entre como convidado" />
+      <Button layoutX="324.0" layoutY="245.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Enviar Letra" />
       <Label layoutX="297.0" layoutY="249.0" text="ou" />
    </children>
 </AnchorPane>

@@ -1,0 +1,6 @@
+.root{
+    -fx-background-image: url("degrade2.jpg");
+    -fx-background-repeat:repeat;
+    -fx-background-position:center;
+    -fx-background-size:auto;
+}

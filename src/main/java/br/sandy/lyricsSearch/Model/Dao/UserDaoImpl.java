@@ -1,5 +1,6 @@
-package com.example.lyrics;
+package br.sandy.lyricsSearch.Model.Dao;
 
+import br.sandy.lyricsSearch.Model.User;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
