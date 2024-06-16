@@ -19,18 +19,15 @@ public class AddMusicaController {
     @FXML
     private TextField titulo;
 
-    MusicListDaoImp musicDao=MusicListDaoImp.getInstance();
+    MusicListDaoImp musicDao = MusicListDaoImp.getInstance();
 
-    public void addMusic(ActionEvent event){
-        Music musica = new Music(titulo.getText(), artista.getText(), album.getText(), letra.getText());
-
-        if (titulo.getText()!=null && artista.getText()!=null && album.getText()!=null && letra.getText()!=null){
+    public void addMusic(ActionEvent event) {
+        if (!titulo.getText().isEmpty() && !artista.getText().isEmpty() && !album.getText().isEmpty() && !letra.getText().isEmpty()) {
+            Music musica = new Music(titulo.getText(), artista.getText(), album.getText(), letra.getText());
             musicDao.addMusics(musica);
-
         }
-        for (int i=0; i<musicDao.MusicList.size();i++) {
-            System.out.println("titulo:"+musicDao.MusicList.get(i).getTitle());
+        for (Music music : musicDao.getAllMusics()) {
+            System.out.println("titulo: " + music.getTitle());
         }
     }
-
 }
