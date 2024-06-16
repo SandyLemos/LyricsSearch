@@ -22,16 +22,17 @@ public class CadastroController {
 
     UserDaoImpl userDao = UserDaoImpl.getInstance();
 
+    @FXML
     public void addUser(ActionEvent event) {
-        if(nome.getText().equals(null)==false && email.getText().equals(null)==false && senha.getText().equals(null)==false && telefone.getText().equals(null)==false) {
-            User usuario = new User(nome.getText(),senha.getText(),email.getText(), telefone.getText());
-            userDao.users.add(usuario);
+        if (!nome.getText().isEmpty() && !email.getText().isEmpty() && !senha.getText().isEmpty() && !telefone.getText().isEmpty()) {
+            User usuario = new User(nome.getText(), senha.getText(), email.getText(), telefone.getText());
+            System.out.println("Adicionando pela UI: " + usuario.getUserName());
+            userDao.addUser(usuario);
         }
 
-        for(int i=0; i<userDao.users.size(); i++) {
-            User usuarioTeste = userDao.users.get(i);
-            System.out.println("Nome: "+ usuarioTeste.getUserName() + "E-mail: "+ usuarioTeste.getEmail());
+        for (int i = 0; i < userDao.getAllUsers().size(); i++) {
+            User usuarioTeste = userDao.getAllUsers().get(i);
+            System.out.println("Nome: " + usuarioTeste.getUserName() + " E-mail: " + usuarioTeste.getEmail());
         }
-
     }
 }
