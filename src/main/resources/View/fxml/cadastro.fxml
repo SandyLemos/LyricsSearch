@@ -10,15 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< Updated upstream
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lyrics.CadastroController">
-=======
-<<<<<<< HEAD
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../assets/themes/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sandy.lyricsSearch.Controller.CadastroController">
-=======
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lyrics.CadastroController">
->>>>>>> 24f32c3c702ed249f6093477c6437ea275488b60
->>>>>>> Stashed changes
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="307.0" layoutX="75.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="467.0" />
       <Label layoutX="208.0" layoutY="47.0" text="Cadastro">
@@ -28,7 +20,7 @@
          <graphic>
             <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@user.png" />
+                  <Image url="@../../icons/user.png" />
                </image>
             </ImageView>
          </graphic>
@@ -45,28 +37,15 @@
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons8-arrow-30.png" />
+                  <Image url="@../../icons/icons8-arrow-30.png" />
                </image>
             </ImageView>
          </graphic>
       </JFXButton>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
       <Button fx:id="back" layoutX="80.0" layoutY="305.0" mnemonicParsing="false" onAction="#backToHelloScreen" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: black;" text="    Voltar" textFill="WHITE" />
       <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="84.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-arrow-left-30.png" />
-=======
->>>>>>> Stashed changes
-      <Button layoutX="80.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: black;" text="    Voltar" textFill="WHITE" />
-      <ImageView fitHeight="25.0" fitWidth="18.0" layoutX="84.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../Downloads/icons8-arrow-left-30.png" />
-<<<<<<< Updated upstream
-=======
->>>>>>> 24f32c3c702ed249f6093477c6437ea275488b60
->>>>>>> Stashed changes
          </image>
       </ImageView>
    </children>
